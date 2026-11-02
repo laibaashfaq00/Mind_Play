@@ -2521,3 +2521,68 @@ footer,
     width: calc(100% - 24px);
   }
 }
+/* Final Mobile Layout Fix */
+
+html,
+body {
+   width: 100%;
+   max-width: 100%;
+   min-width: 0;
+}
+   
+body {
+   overflow-x: hidden;
+}
+   
+* {
+   box-sizing: border-box;
+}
+   
+.container,
+.nav-container {
+   width: min(100% - 48px, var(--container));
+   max-width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.hero-grid {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+   width: 100%;
+   min-width: 0;
+}
+   
+@media (max-width: 760) {
+   .container,
+   .nav-container {
+      width: calc(100% - 28px);
+      max-width: 600px;
+   }
+
+   .hero-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+   }
+
+   .hero-container,
+   .hero-visual,
+   .science-panel {
+      min-width: 0;
+      max-width: 100%;
+   }
+
+   .stats-grid,
+   .game-grid,
+   .progress-grid {
+      width: 100%;
+      min-width: 0;
+   }
+}
+
+@media (max-width: 430px) {
+   .container,
+   .nav-container {
+      width: calc(100% - 24px);
+   }
+}
