@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <title>Mind Play | Challenge Your Brain</title>
+  <meta
+    name="description"
+    content="Challenge your brain with fun memory, logic, number and puzzle games on Mind Play."
+  >
+
+  <!-- Website styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/games.css">
+
+  <!-- Website font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+
+  <!-- Background decoration -->
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="#home" class="brand" aria-label="Mind Play home">
+        <img
+          src="assets/logo.svg"
+          alt="Mind Play logo"
+          class="brand-logo"
+        >
+        <span class="brand-name">mind<span>play</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#games" class="nav-link">Games</a>
+        <a href="#progress" class="nav-link">My Progress</a>
+        <a href="#science" class="nav-link">Brain Science</a>
+      </nav>
+
+      <a href="#games" class="header-button">
+        Play Now <span aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            YOUR DAILY BRAIN WORKOUT
+          </div>
+
+          <h1>
+            Give your mind<br>
+            its next <span class="gradient-text">challenge.</span>
+          </h1>
+
+          <p class="hero-description">
+            Sharpen your thinking, test your memory, and solve clever
+            puzzles. Your next mental challenge is just one click away.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#games" class="primary-button">
+              Explore Games
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="#science" class="secondary-button">
+              Why Mind Play?
+            </a>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>🧠</span>
+              <span>⚡</span>
+              <span>🎯</span>
+            </div>
+
+            <div>
+              <strong>Think better. Play smarter.</strong>
+              <p>Small challenges. Meaningful practice.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Hero visual -->
+        <div class="hero-visual" aria-label="Brain challenge illustration">
+
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+
+          <div class="orbit-dot dot-one"></div>
+          <div class="orbit-dot dot-two"></div>
+          <div class="orbit-dot dot-three"></div>
+
+          <div class="brain-card">
+            <div class="brain-card-top">
+              <span class="mini-label">MIND POWER</span>
+              <span class="live-indicator">● LIVE</span>
+            </div>
+
+            <div class="brain-illustration">🧠</div>
+
+            <div class="brain-card-bottom">
+              <span>Ready to think?</span>
+              <span class="brain-sparkle">✦</span>
+            </div>
+          </div>
+
+          <div class="floating-card memory-float">
+            <span class="float-icon">◈</span>
+            <div>
+              <strong>Memory</strong>
+              <small>Train your focus</small>
+            </div>
+          </div>
+
+          <div class="floating-card logic-float">
+            <span class="float-icon">⌘</span>
+            <div>
+              <strong>Logic</strong>
+              <small>Think differently</small>
+            </div>
+          </div>
+
+          <div class="floating-card number-float">
+            <span class="number-symbol">123</span>
+            <div>
+              <strong>Numbers</strong>
+              <small>Find the pattern</small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= QUICK STATS ================= -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+
+        <div class="stat-item">
+          <span class="stat-icon">✦</span>
+          <div>
+            <h3>8</h3>
+            <p>Brain Games</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-icon">◈</span>
+          <div>
+            <h3>3</h3>
+            <p>Difficulty Levels</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-icon">↗</span>
+          <div>
+            <h3 id="heroPlayedCount">0</h3>
+            <p>Games You Played</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-icon">◎</span>
+          <div>
+            <h3>∞</h3>
+            <p>Ways to Challenge Yourself</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= GAMES SECTION ================= -->
+    <section class="games-section section-padding" id="games">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">PICK YOUR CHALLENGE</div>
+            <h2>Find your <span class="gradient-text">next game.</span></h2>
+            <p>
+              Every game challenges a different skill. Choose one and
+              see what you can do.
+            </p>
+          </div>
+
+          <a href="#games" class="text-link">
+            All games <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+
+        <!-- Game category filters -->
+        <div class="game-filters" role="group" aria-label="Filter games">
+
+          <button
+            class="filter-button active"
+            type="button"
+            data-filter="all"
+          >
+            All Games
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="memory"
+          >
+            <span>◈</span> Memory
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="logic"
+          >
+            <span>⌘</span> Logic
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="numbers"
+          >
+            <span>123</span> Numbers
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="puzzle"
+          >
+            <span>▦</span> Puzzles
+          </button>
+
+        </div>
+
+
+        <!-- JavaScript creates the game cards here -->
+        <div class="game-grid" id="gameGrid">
+
+          <div class="games-loading">
+            <div class="loading-spinner"></div>
+            <p>Preparing your brain games...</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= PROGRESS SECTION ================= -->
+    <section class="progress-section section-padding" id="progress">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">YOUR PERSONAL DASHBOARD</div>
+            <h2>Your progress, <span class="gradient-text">your pace.</span></h2>
+            <p>
+              Keep track of your practice and celebrate the progress
+              you make along the way.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="progress-grid">
+
+          <article class="progress-card">
+            <div class="progress-card-icon">🎮</div>
+            <p>Total games played</p>
+            <h3 id="played">0</h3>
+            <span class="progress-caption">Your practice adds up</span>
+          </article>
+
+          <article class="progress-card">
+            <div class="progress-card-icon">⭐</div>
+            <p>Total score</p>
+            <h3 id="total">0</h3>
+            <span class="progress-caption">Points earned across games</span>
+          </article>
+
+          <article class="progress-card">
+            <div class="progress-card-icon">🏆</div>
+            <p>Best score</p>
+            <h3 id="best">0</h3>
+            <span class="progress-caption">Your personal best</span>
+          </article>
+
+        </div>
+
+
+        <div class="recent-activity-card">
+          <div class="recent-heading">
+            <div>
+              <h3>Recent activity</h3>
+              <p>Your latest completed challenges</p>
+            </div>
+
+            <span class="activity-icon">◷</span>
+          </div>
+
+          <div id="recent" class="recent-activity-list">
+            <div class="empty-state">
+              <div class="empty-state-icon">✦</div>
+              <h4>Your journey starts here</h4>
+              <p>
+                Play your first game and your activity will appear here.
+              </p>
+              <a href="#games" class="text-link">Choose a game →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= BRAIN SCIENCE SECTION ================= -->
+    <section class="science-section section-padding" id="science">
+      <div class="container">
+
+        <div class="science-panel">
+
+          <div class="science-content">
+            <div class="eyebrow">THE THINKING BEHIND THE PLAY</div>
+
+            <h2>
+              Make room for<br>
+              <span class="gradient-text">curiosity.</span>
+            </h2>
+
+            <p>
+              Puzzles give you a chance to practise attention, pattern
+              recognition, planning, and problem-solving. Different
+              challenges engage different ways of thinking.
+            </p>
+
+            <a href="#games" class="primary-button">
+              Start a Challenge <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+
+          <div class="science-features">
+
+            <article class="science-feature">
+              <div class="science-feature-icon memory-icon">◈</div>
+              <div>
+                <h3>Memory & Attention</h3>
+                <p>
+                  Practise remembering details and staying focused
+                  on the task in front of you.
+                </p>
+              </div>
+            </article>
+
+            <article class="science-feature">
+              <div class="science-feature-icon logic-icon">⌘</div>
+              <div>
+                <h3>Logic & Reasoning</h3>
+                <p>
+                  Explore patterns, compare possibilities, and work
+                  through problems step by step.
+                </p>
+              </div>
+            </article>
+
+            <article class="science-feature">
+              <div class="science-feature-icon strategy-icon">↗</div>
+              <div>
+                <h3>Planning & Strategy</h3>
+                <p>
+                  Consider your options and make thoughtful moves
+                  as each challenge unfolds.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <p class="science-note">
+          Mind Play is designed for learning and entertainment.
+          Results vary, and playing puzzles does not guarantee
+          improvements in every cognitive skill.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <a href="#home" class="brand footer-brand">
+        <img src="assets/logo.svg" alt="" class="brand-logo">
+        <span class="brand-name">mind<span>play</span></span>
+      </a>
+
+      <p>Think curious. Play smarter. One challenge at a time.</p>
+
+      <a href="#home" class="back-to-top">
+        Back to top ↑
+      </a>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear">2026</span> Mind Play</span>
+      <span>Made for curious minds ✦</span>
+    </div>
+  </footer>
+
+
+  <!-- ================= GAME MODAL ================= -->
+  <div
+    class="game-modal"
+    id="modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <div class="modal-panel">
+
+      <div class="modal-header">
+        <div>
+          <div class="eyebrow">YOUR NEXT CHALLENGE</div>
+          <h2 id="modalTitle">Game Title</h2>
+        </div>
+
+        <button
+          type="button"
+          class="modal-close"
+          id="back"
+          aria-label="Back to games"
+        >
+          <span aria-hidden="true">←</span>
+          <span>Back to Games</span>
+        </button>
+
+        <button
+          type="button"
+          class="modal-close"
+          id="backToDifficulty"
+          aria-label="Back to difficulty selection"
+          hidden
+        >
+          <span aria-hidden="true">←</span>
+          <span>Back to Difficulty</span>
+        </button>
+      </div>
+
+
+      <div class="modal-toolbar">
+
+        <label class="difficulty-control" for="difficulty">
+          Difficulty
+
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+
+        <div class="game-live-score">
+          <span>Score</span>
+          <strong id="gameScore">0</strong>
+        </div>
+
+      </div>
+
+
+      <div class="game-message" id="message" aria-live="polite">
+        Choose your difficulty and start playing.
+      </div>
+
+
+      <!-- Each game displays its controls and board here -->
+      <div class="game-stage" id="stage">
+        <div class="stage-placeholder">
+          <div class="stage-placeholder-icon">✦</div>
+          <p>Your game will appear here.</p>
+        </div>
+      </div>
+
+
+      <div class="modal-footer">
+        <p id="gameInstructions">
+          Take your time and enjoy the challenge.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          id="restart"
+        >
+          Start Game <span aria-hidden="true">↻</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= JAVASCRIPT FILES ================= -->
+
+  <!-- Progress and local storage -->
+  <script src="js/progress.js"></script>
+
+  <!-- Individual games -->
+  <script src="js/games/image-matcher.js"></script>
+  <script src="js/games/sequence-master.js"></script>
+  <script src="js/games/sudoku.js"></script>
+  <script src="js/games/tic-tac-toe.js"></script>
+  <script src="js/games/number-slider.js"></script>
+  <script src="js/games/maze-escape.js"></script>
+  <script src="js/games/snake.js"></script>
+  <script src="js/games/lights-out.js"></script>
+
+  <!-- Main website controller -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
