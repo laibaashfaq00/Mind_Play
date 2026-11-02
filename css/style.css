@@ -2462,14 +2462,3 @@ select {
 .recent-activity-meta { color: var(--text-muted, #aab0c0); font-size: .88rem; text-align: right; }
 @media (max-width: 520px) { .recent-activity-item { align-items: flex-start; flex-direction: column; gap: 4px; } .recent-activity-meta { text-align: left; } }
 
-html {
-   background: #100914;
-   width: 100%;
-   min-width: 100%;
-}
-
-body {
-   width: 100%;
-   min-width: 100%;
-   background: #100914;
-}
