@@ -133,7 +133,7 @@ img {
 }
 
 .background-glow {
-  position: absolute;
+  position: fixed;
   width: 420px;
   height: 420px;
   pointer-events: none;
