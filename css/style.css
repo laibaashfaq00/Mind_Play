@@ -2468,11 +2468,18 @@ body {
   width: 100%;
   max-width: 100%;
   min-width: 0;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
 }
+
+ * {
+    box-sizing: border-box;
+ }
+
+@media (max-width: 760) {
 
 .site-header,
 main,
@@ -2487,44 +2494,24 @@ footer,
 }
 
 .container {
-  box-sizing: border-box;
-  max-width: var(--container);
+.nav-container {
+   width: calc(100% - 28px);
+   max-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
 }
-
-@media (max-width: 760px) {
-  .site-header,
-  main,
-  footer,
-  .hero-section,
-  .stats-section,
-  .games-section,
-  .progress-section,
-  .science-section {
-    width: 100vw;
-    max-width: 100vw;
-  }
-
-  .container {
-    width: calc(100% - 28px);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .nav-container {
-    width: calc(100% - 28px);
-  }
 
   .stats-grid,
   .game-grid,
-  .progress-grid {
-    width: 100%;
-    min-width: 0;
-  }
-
+  .progress-grid,
   .hero-grid,
   .science-panel {
-    min-width: 0;
+     width: 100%;
+     min-width: 0;
+  }
+
+  .hero-grid {
+     grid-template-columns: minmax(0, 1fr);
   }
 }
 
